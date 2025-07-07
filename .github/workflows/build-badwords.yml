@@ -33,6 +33,6 @@ jobs:
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add minecraft/badwords.yml
-        git diff --quiet && echo "No changes to commit." || git commit -m "Auto-update badwords.yml"
+        git add minecraft/BadWords.yml
+        git diff --quiet && echo "No changes to commit." || git commit -m "Auto-update BadWords.yml"
         git push
