@@ -1,19 +1,19 @@
-# Contributing to Nepali Badwords List
+# Contributing to the Global Badwords List
 
 Thank you for wanting to help!
 
-This project is for collecting Nepali bad words (in English letters) so we can block them on things like Minecraft servers and chat apps.
+This project collects offensive words used in different countries and languages so we can block them in games, chat apps, websites, and more.
 
 ## 📥 How to Add a Word
 
 1. Go to the `data/` folder.
-2. Open the file named `badwords-1.txt`.
-3. Add your word to the end of the list.
-4. Make sure:
+2. Choose the file for the country you want to add to, e.g. `data/nepal.txt` or `data/usa.txt`.
+3. Add your word at the end of the file.
+4. Follow these rules:
    - One word per line
-   - Only English (Romanized Nepali) spelling
-   - No capital letters (use lowercase only)
-   - The word is **actually bad** and used as an insult or swear
+   - Use lowercase (for Latin/Roman scripts)
+   - Use the Romanized version if the word isn’t in Latin script
+   - Only include clearly offensive, insulting, or vulgar words
 
 ✅ Example:
 
