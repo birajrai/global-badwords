@@ -3,7 +3,7 @@ const path = require('path');
 const yaml = require('js-yaml');
 
 const dataDir = path.join(__dirname, '..', 'data');
-const outputFile = path.join(__dirname, 'badwords.yml');
+const outputFile = path.join(__dirname, 'BadWords.yml');
 
 let badwordsSet = new Set();
 
@@ -24,4 +24,4 @@ const yamlContent = yaml.dump({ badwords: badwordsArray });
 
 fs.writeFileSync(outputFile, yamlContent, 'utf8');
 
-console.log(`✅ badwords.yml generated with ${badwordsArray.length} entries.`);
+console.log(`✅ BadWords.yml generated with ${badwordsArray.length} entries.`);

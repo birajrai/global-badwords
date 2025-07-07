@@ -1,0 +1,38 @@
+name: Build Badwords YAML
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+      with:
+        persist-credentials: true  # Needed to push changes back
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      working-directory: minecraft
+      run: npm install
+
+    - name: Run build script
+      working-directory: minecraft
+      run: npm run build
+
+    - name: Commit and push changes
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add minecraft/badwords.yml
+        git diff --quiet && echo "No changes to commit." || git commit -m "Auto-update badwords.yml"
+        git push

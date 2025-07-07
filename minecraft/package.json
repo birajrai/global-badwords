@@ -1,0 +1,14 @@
+{
+  "name": "minecraft-badwords-merger",
+  "version": "1.0.0",
+  "description": "Merge badwords text files into a YAML file for Minecraft server filtering.",
+  "main": "index.js",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}
